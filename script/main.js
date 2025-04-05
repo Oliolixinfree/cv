@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.projects-item')
     let isOpen = false
 
+    // test
     const calculateAge = () => {
         const today = new Date()
         const birth = new Date('1997-07-06')
