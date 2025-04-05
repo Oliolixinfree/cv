@@ -83,10 +83,13 @@ header {
 
 .mode-switcher__icon {
     color: var(--colors-text);
+    transition: all 0.3s ease;
+    transform-origin: center;
 }
 
 .mode-switcher__icon:hover {
     color: var(--colors-hover);
+    transform: scale(1.05);
 }
 
 .info {
@@ -128,17 +131,16 @@ header {
 .contacts-items li {
     display: flex;
     align-items: center;
-    opacity: 0.7;
 }
 
-.contacts-items li:hover {
-    opacity: 1;
-    transform: scale(1.3);
-    transition: 0.3s;
-}
-
-.contacts-items__icon path {
+.contacts-items__icon {
     fill: var(--colors-text);
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+.contacts-items__icon:hover {
+    fill: var(--colors-hover);
+    transform: scale(1.05);
 }
 
 article {
@@ -168,16 +170,21 @@ article {
 }
 
 .projects-item {
-    display: grid;
+    display: none;
     gap: 1rem;
     padding: 1rem;
     background-color: var(--colors-ui-base);
     border-radius: var(--radius);
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.projects-item:nth-child(-n + 1) {
+    display: grid;
 }
 
 .projects-item:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
+    transform: scale(1.02);
     box-shadow: var(--shadow);
 }
 
@@ -198,19 +205,38 @@ article {
 .projects-item__technologies li::before {
     content: '-';
 }
-
-.close-open {
+@keyframes rotateSpring {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+.arrow-btn {
     display: flex;
     justify-content: center;
     color: var(--colors-text);
+}
+.arrow-btn__icon {
+    color: var(--colors-text);
+    transition: all 0.3s ease;
+    transform-origin: center;
     cursor: pointer;
 }
-.close-open__icon {
-    color: var(--colors-text);
+.arrow-btn__icon.rotated {
+    animation: rotateSpring 0.4s ease-out forwards;
+}
+.arrow-btn__icon:not(.rotated) {
+    animation: rotateSpring 0.4s ease-out reverse forwards;
 }
 
-.close-open__icon:hover {
+.arrow-btn__icon:hover {
     color: var(--colors-hover);
+    transform: scale(1.03);
 }
 
 .skills p {
@@ -227,12 +253,14 @@ article {
     padding: 0.4rem;
     border-radius: var(--radius);
     background-color: var(--colors-ui-base);
+    transition: all 0.3s ease;
+    transform-origin: center;
+    cursor: default;
 }
 
 .skills-items li:hover {
     box-shadow: var(--shadow);
-    transform: scale(1.1);
-    transition: 0.3s;
+    transform: scale(1.05);
 }
 
 main {
@@ -273,16 +301,35 @@ main {
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .projects-item__technologies {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-item:nth-child(-n + 2) {
+        display: grid;
+    }
+
+    .projects-item:nth-child(n + 3) {
+        display: none;
     }
 }
 
 @media (min-width: 1024px) {
     .projects {
         grid-template-columns: repeat(3, 1fr);
-    }
-    .projects {
         gap: 2rem;
+    }
+
+    .projects-item:hover {
+        transform: scale(1.05);
+    }
+
+    .projects-item:nth-child(-n + 3) {
+        display: grid;
+    }
+
+    .projects-item:nth-child(n + 4) {
+        display: none;
     }
 }
