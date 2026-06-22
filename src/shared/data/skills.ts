@@ -4,6 +4,7 @@ export const SKILLS = {
 		'React',
 		'Next.js',
 		'Vue 3',
+		'Astro',
 		'Node.js',
 		'Express',
 		'React Hook Form',
