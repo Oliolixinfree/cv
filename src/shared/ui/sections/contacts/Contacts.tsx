@@ -2,8 +2,15 @@ import { LINKS } from '@/shared/data/links'
 import { Button, Card, Link } from '@heroui/react'
 import { Download } from 'lucide-react'
 import { SectionWrapper } from '../../SectionWrapper'
+import { getDictionary, Locale } from '@/app/dictionaries'
 
-export function Contacts() {
+interface Props {
+	lang: Locale
+}
+
+export async function Contacts({ lang }: Props) {
+	const dict = await getDictionary(lang)
+
 	return (
 		<SectionWrapper id="contacts">
 			<Card
@@ -12,7 +19,7 @@ export function Contacts() {
 			>
 				<Card.Content>
 					<h2 className="text-foreground capitalize text-3xl font-bold mb-10 text-center">
-						Contacts
+						{dict.contacts.sectionTitle}
 					</h2>
 					<div className="flex items-center justify-center flex-wrap gap-6">
 						<Link
@@ -86,7 +93,7 @@ export function Contacts() {
 					<div className="text-center mt-10">
 						<Button size="lg">
 							<Download />
-							Download resume
+							{dict.contacts.downloadResume}
 						</Button>
 					</div>
 				</Card.Content>

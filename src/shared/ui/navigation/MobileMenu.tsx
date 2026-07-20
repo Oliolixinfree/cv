@@ -2,33 +2,36 @@
 
 import { Button, Drawer, useOverlayState } from '@heroui/react'
 import { LucideIcon, Menu } from 'lucide-react'
-import {
-	Blocks,
-	Contact,
-	Container,
-	FileUser,
-	GraduationCap,
-	Trophy
-} from 'lucide-react'
+import { Blocks, Contact, GraduationCap, Trophy } from 'lucide-react'
 import { LanguageButtonGroup } from '../LanguageButtonGroup'
 import { ThemeSwitch } from '../ThemeSwitch'
 import { IconName, NavItem } from '@/shared/data/nav-items'
+import { Dictionary } from '@/app/dictionaries'
 
 type Props = {
 	items: readonly NavItem[]
+	dict: Dictionary['nav']
+	uiDict: Dictionary['ui']
+	themeDict: Dictionary['theme']
 	className?: string
 }
 
 const iconMap: Record<IconName, LucideIcon> = {
-	fileUser: FileUser,
+	// fileUser: FileUser,
 	blocks: Blocks,
 	graduationCap: GraduationCap,
 	trophy: Trophy,
-	container: Container,
+	// container: Container,
 	contact: Contact
 }
 
-export function MobileMenu({ items, className }: Props) {
+export function MobileMenu({
+	items,
+	dict,
+	uiDict,
+	themeDict,
+	className
+}: Props) {
 	const state = useOverlayState()
 
 	const handleClick = () => {
@@ -43,14 +46,14 @@ export function MobileMenu({ items, className }: Props) {
 					variant="outline"
 				>
 					<Menu />
-					Menu
+					{uiDict.menu}
 				</Button>
 				<Drawer.Backdrop>
 					<Drawer.Content placement="top">
 						<Drawer.Dialog>
 							<Drawer.CloseTrigger />
 							<Drawer.Header>
-								<Drawer.Heading>Navigation</Drawer.Heading>
+								<Drawer.Heading>{uiDict.navigation}</Drawer.Heading>
 							</Drawer.Header>
 							<Drawer.Body>
 								<nav className="flex flex-col gap-1">
@@ -65,7 +68,7 @@ export function MobileMenu({ items, className }: Props) {
 												className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-foreground transition-colors hover:bg-default capitalize"
 											>
 												<Icon className="size-5 text-muted" />
-												{item.label}
+												{dict[item.label]}
 											</a>
 										)
 									})}
@@ -74,7 +77,7 @@ export function MobileMenu({ items, className }: Props) {
 							<Drawer.Footer>
 								<div className="flex gap-4">
 									<LanguageButtonGroup />
-									<ThemeSwitch />
+									<ThemeSwitch dict={themeDict} />
 								</div>
 							</Drawer.Footer>
 						</Drawer.Dialog>

@@ -1,0 +1,40 @@
+{
+	"nav": {
+		"experience": "Experience",
+		"achievements": "Achievements",
+		"skills": "Skills",
+		"contacts": "Contacts"
+	},
+	"ui": {
+		"menu": "Menu",
+		"navigation": "Navigation"
+	},
+	"theme": {
+		"toggleTheme": "Toggle theme",
+		"themeMenu": "Theme Menu",
+		"light": "Light",
+		"dark": "Dark",
+		"system": "System"
+	},
+	"hero": {
+		"role": "Frontend Developer",
+		"subtitle": "Frontend Engineer with 2+ years of commercial experience building scalable internal tools, analytics platforms, and automation workflows. Specialized in React, Next.js, performance optimization, and complex integrations.",
+		"downloadResume": "Download resume"
+	},
+	"skills": {
+		"sectionTitle": "Skills",
+		"groups": {
+			"core": "Core",
+			"frameworksAndLibraries": "Frameworks & Libraries",
+			"styling": "Styling & UI",
+			"stateManagement": "State Management",
+			"toolsAndInfrastructure": "Tools & Infrastructure",
+			"other": "Other"
+		}
+	},
+	"contacts": {
+		"sectionTitle": "Contacts",
+		"downloadResume": "Download resume"
+	},
+	"footer": { "fullName": "Ivan Pavlovich" }
+}

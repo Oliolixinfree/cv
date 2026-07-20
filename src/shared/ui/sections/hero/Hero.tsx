@@ -1,31 +1,33 @@
+import { getDictionary, Locale } from '@/app/dictionaries'
 import { LINKS } from '@/shared/data/links'
 import { Button, Link } from '@heroui/react'
 import { Download } from 'lucide-react'
 
-export function Hero() {
+interface Props {
+	lang: Locale
+}
+
+export async function Hero({ lang }: Props) {
+	const dict = await getDictionary(lang)
+
 	return (
 		<section className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 pt-20 pb-16 overflow-hidden">
 			<div className="relative mx-auto max-w-3xl">
-				<p className="text-sm font-medium text-accent mb-2">
-					Frontend Developer
-				</p>
+				<p className="text-sm font-medium text-accent mb-2">{dict.hero.role}</p>
 				<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-					Ivan Pavlovich
+					{dict.footer.fullName}
 				</h1>
 				<p className="text-lg sm:text-xl text-muted leading-relaxed mb-10 max-w-2xl">
 					{/* Frontend Engineer building high-performance web applications,
 						internal platforms, and automation solutions. Experienced in
 						React/Next.js ecosystems, complex integrations, and end-to-end
 						product development. */}
-					Frontend Engineer with 2+ years of commercial experience building
-					scalable internal tools, analytics platforms, and automation
-					workflows. Specialized in React, Next.js, performance optimization,
-					and complex integrations.
+					{dict.hero.subtitle}
 				</p>
 				<div className="flex items-center flex-wrap gap-4">
 					<Button size="lg">
 						<Download />
-						Download resume
+						{dict.hero.downloadResume}
 					</Button>
 					<Link
 						href={LINKS.gitHub}

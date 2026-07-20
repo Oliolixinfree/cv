@@ -1,11 +1,13 @@
+import { Dictionary } from '@/app/dictionaries'
 import { NavItem } from '@/shared/data/nav-items'
 
 type Props = {
 	items: readonly NavItem[]
+	dict: Dictionary['nav']
 	className?: string
 }
 
-export function DesktopMenu({ items }: Props) {
+export function DesktopMenu({ items, dict }: Props) {
 	return (
 		<nav>
 			<ul className="hidden md:flex gap-4">
@@ -15,7 +17,7 @@ export function DesktopMenu({ items }: Props) {
 							href={`#${i.label}`}
 							className="font-semibold no-underline hover:underline capitalize"
 						>
-							{i.label}
+							{dict[i.label]}
 						</a>
 					</li>
 				))}

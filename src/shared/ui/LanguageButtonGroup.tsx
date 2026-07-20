@@ -1,17 +1,35 @@
 'use client'
 
+import { Locale } from '@/app/dictionaries'
 import type { Key } from '@heroui/react'
 import { ToggleButton, ToggleButtonGroup } from '@heroui/react'
-import { useState } from 'react'
+import { useParams, usePathname, useRouter } from 'next/navigation'
+
+const locales = ['en', 'be', 'ru'] as const
 
 export const LanguageButtonGroup = () => {
-	const [selectedKeys, setSelectedKeys] = useState(new Set<Key>(['en']))
+	const router = useRouter()
+	const pathname = usePathname()
+	const params = useParams<{ lang: string }>()
+
+	const selectedKeys = new Set<Key>([params.lang])
+
+	const handleChange = (keys: Set<Key>) => {
+		const next = Array.from(keys)[0] as string
+		if (!next || next === params.lang) return
+		if (!locales.includes(next as Locale)) return
+
+		const segments = pathname.split('/')
+		segments[1] = next
+		const hash = window.location.hash
+		router.replace(`${segments.join('/')}${hash}`)
+	}
 
 	return (
 		<ToggleButtonGroup
 			selectionMode="single"
 			selectedKeys={selectedKeys}
-			onSelectionChange={setSelectedKeys}
+			onSelectionChange={handleChange}
 		>
 			<ToggleButton
 				aria-label="English"
@@ -20,8 +38,8 @@ export const LanguageButtonGroup = () => {
 				EN
 			</ToggleButton>
 			<ToggleButton
-				aria-label="Belarusian Cyrillic"
-				id="be-cyrillic"
+				aria-label="Belarusian"
+				id="be"
 			>
 				<ToggleButtonGroup.Separator />
 				BE

@@ -1,0 +1,40 @@
+{
+	"nav": {
+		"experience": "Опыт",
+		"achievements": "Достижения",
+		"skills": "Навыки",
+		"contacts": "Контакты"
+	},
+	"ui": {
+		"menu": "Меню",
+		"navigation": "Навигация"
+	},
+	"theme": {
+		"toggleTheme": "Переключить тему",
+		"themeMenu": "Меню темы",
+		"light": "Светлая",
+		"dark": "Тёмная",
+		"system": "Системная"
+	},
+	"hero": {
+		"role": "Frontend-разработчик",
+		"subtitle": "Frontend-инженер с опытом коммерческой разработки от 2 лет: масштабируемые внутренние инструменты, аналитические платформы и автоматизация процессов. Специализация — React, Next.js, оптимизация производительности и сложные интеграции.",
+		"downloadResume": "Скачать резюме"
+	},
+	"skills": {
+		"sectionTitle": "Навыки",
+		"groups": {
+			"core": "Основное",
+			"frameworksAndLibraries": "Фреймворки и библиотеки",
+			"styling": "Стилизация и UI",
+			"stateManagement": "Управление состоянием",
+			"toolsAndInfrastructure": "Инструменты и инфраструктура",
+			"other": "Прочее"
+		}
+	},
+	"contacts": {
+		"sectionTitle": "Контакты",
+		"downloadResume": "Скачать резюме"
+	},
+	"footer": { "fullName": "Иван Павлович" }
+}

@@ -43,3 +43,12 @@ export const SKILLS = {
 		'CLI Tools'
 	]
 } as const
+
+export const groupKeys = [
+	'core',
+	'frameworksAndLibraries',
+	'styling',
+	'stateManagement',
+	'toolsAndInfrastructure',
+	'other'
+] as const

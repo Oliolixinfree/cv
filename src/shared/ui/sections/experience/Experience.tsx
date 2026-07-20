@@ -1,8 +1,15 @@
 import { EXPERIENCE } from '@/shared/data/experience'
 import { Card } from '@heroui/react'
 import { SectionWrapper } from '../../SectionWrapper'
+import { getDictionary, Locale } from '@/app/dictionaries'
 
-export function Experience() {
+interface Props {
+	lang: Locale
+}
+
+export async function Experience({ lang }: Props) {
+	const dict = await getDictionary(lang)
+
 	const calculateExperience = (
 		startDate: Date | string,
 		endDate: Date | string

@@ -1,0 +1,40 @@
+{
+	"nav": {
+		"experience": "Досвед",
+		"achievements": "Дасягненні",
+		"skills": "Навыкі",
+		"contacts": "Кантакты"
+	},
+	"ui": {
+		"menu": "Меню",
+		"navigation": "Навігацыя"
+	},
+	"theme": {
+		"toggleTheme": "Пераключыць тэму",
+		"themeMenu": "Меню тэмы",
+		"light": "Светлая",
+		"dark": "Цёмная",
+		"system": "Сістэмная"
+	},
+	"hero": {
+		"role": "Frontend-распрацоўшчык",
+		"subtitle": "Frontend-інжынер з камерцыйным вопытам ад 2 гадоў: маштабуемыя ўнутраныя інструменты, аналітычныя платформы і аўтаматызацыя працэсаў. Спецыялізацыя — React, Next.js, аптымізацыя прадукцыйнасці і складаныя інтэграцыі.",
+		"downloadResume": "Спампаваць рэзюмэ"
+	},
+	"skills": {
+		"sectionTitle": "Навыкі",
+		"groups": {
+			"core": "Асноўнае",
+			"frameworksAndLibraries": "Фрэймворкі і бібліятэкі",
+			"styling": "Стылізацыя і UI",
+			"stateManagement": "Кіраванне станам",
+			"toolsAndInfrastructure": "Інструменты і інфраструктура",
+			"other": "Іншае"
+		}
+	},
+	"contacts": {
+		"sectionTitle": "Кантакты",
+		"downloadResume": "Спампаваць рэзюмэ"
+	},
+	"footer": { "fullName": "Іван Паўловіч" }
+}
