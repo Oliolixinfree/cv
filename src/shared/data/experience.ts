@@ -4,7 +4,7 @@ export const EXPERIENCE = [
 		description: 'Digital marketing agency operating across 6+ countries.',
 		title: 'Frontend Developer',
 		employmentType: 'Full-time',
-		startDate: '2025-02-01T00:00:00.000Z',
+		startDate: '2025-02-01',
 		endDate: 'now',
 		locationType: 'Hybrid',
 		achievements: [
@@ -25,8 +25,8 @@ export const EXPERIENCE = [
 		description: 'IT Services and IT Consulting',
 		title: 'Frontend Developer',
 		employmentType: 'Apprenticeship',
-		startDate: '2023-01-01T00:00:00.000Z',
-		endDate: '2023-04-25T00:00:00.000Z',
+		startDate: '2023-01-01',
+		endDate: '2023-04-25',
 		locationType: 'Remote',
 		achievements: [
 			'Developed frontend features for REST-based applications',

@@ -10,24 +10,6 @@ interface Props {
 export async function Experience({ lang }: Props) {
 	const dict = await getDictionary(lang)
 
-	const calculateExperience = (
-		startDate: Date | string,
-		endDate: Date | string
-	) => {
-		const start = new Date(startDate)
-		const end = endDate === 'now' ? new Date() : new Date(endDate)
-
-		let years = end.getFullYear() - start.getFullYear()
-		let months = end.getMonth() - start.getMonth()
-
-		if (months < 0) {
-			years--
-			months += 12
-		}
-
-		return { years, months }
-	}
-
 	return (
 		<SectionWrapper id="experience">
 			<h2 className="text-foreground capitalize text-3xl font-bold mb-10">
@@ -57,16 +39,7 @@ export async function Experience({ lang }: Props) {
 							</Card.Description>
 						</Card.Header>
 						<Card.Content>
-							<p className="text-sm font-medium text-accent mb-2">
-								{i.title} •{' '}
-								{(() => {
-									const { years, months } = calculateExperience(
-										i.startDate,
-										i.endDate
-									)
-									return `${years} yr ${months} mo`
-								})()}
-							</p>
+							<p className="text-sm font-medium text-accent mb-2">{i.title}</p>
 							<ul className="list-disc list-inside space-y-2">
 								{i.achievements.map((a, idx) => (
 									<li key={idx + a}>{a}</li>
