@@ -14,7 +14,7 @@ export function HomeScreen({ lang }: Props) {
 		<>
 			<Hero lang={lang} />
 			<Experience lang={lang} />
-			<Achievements />
+			<Achievements lang={lang} />
 			<Skills lang={lang} />
 			{/* <Projects lang={lang} /> */}
 			<Contacts lang={lang} />

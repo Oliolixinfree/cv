@@ -12,6 +12,7 @@ export async function Hero({ lang }: Props) {
 
 	return (
 		<section className="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 pt-20 pb-16 overflow-hidden">
+			<div className="-bg-linear-45 from-accent/30 from-50% to-warning/30 to-50%  max-w-4xl w-full h-3/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" />
 			<div className="relative mx-auto max-w-3xl">
 				<p className="text-sm font-medium text-accent mb-2">{dict.hero.role}</p>
 				<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">

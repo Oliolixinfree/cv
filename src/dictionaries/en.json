@@ -21,6 +21,90 @@
 		"subtitle": "Frontend Engineer with 2+ years of commercial experience building scalable internal tools, analytics platforms, and automation workflows. Specialized in React, Next.js, performance optimization, and complex integrations.",
 		"downloadResume": "Download resume"
 	},
+	"experience": {
+		"sectionTitle": "Work experience",
+		"present": "now",
+		"employmentTypes": {
+			"full-time": "Full-time",
+			"apprenticeship": "Apprenticeship"
+		},
+		"locationTypes": {
+			"hybrid": "Hybrid",
+			"remote": "Remote"
+		},
+		"items": {
+			"wunder": {
+				"description": "Digital marketing agency operating across 6+ countries.",
+				"title": "Frontend Developer",
+				"achievements": [
+					"Developed an analytics platform for aggregating and processing advertising data from multiple sources and analytical systems",
+					"Implemented complex UI: virtualized lists, multi-level filtering, interactive charts and dashboards",
+					"Integrated frontend with internal REST APIs, advertising systems (Yandex, Google) and Planfix task manager",
+					"Designed and developed scalable internal products from scratch as the sole frontend engineer",
+					"Automated business processes via CLI tools, browser extensions and Telegram bots",
+					"Built analytical dashboards using Google Ads and Wordstat data",
+					"Improved development and build performance by ~15x through migration from Next.js 14 to 16 and Turbopack adoption",
+					"Led migration of legacy projects to modern frontend stack and latest library versions",
+					"Integrated Google Vertex AI into internal workflows and products",
+					"Maintained design system consistency, conducted code reviews, refactored legacy code"
+				]
+			},
+			"clevertec": {
+				"description": "IT Services and IT Consulting",
+				"title": "Frontend Developer",
+				"achievements": [
+					"Developed frontend features for REST-based applications",
+					"Participated in CI/CD and automated deployment setup",
+					"Implemented responsive and cross-browser compatible UI components"
+				]
+			}
+		}
+	},
+	"achievements": {
+		"sectionTitle": "Achievements",
+		"items": {
+			"buildSpeed": {
+				"title": "15x",
+				"description": "Faster builds & dev startup"
+			},
+			"dataProcessing": {
+				"title": "35%",
+				"description": "Reduced data processing time"
+			},
+			"seoReports": {
+				"title": "2h → 2min",
+				"description": "Automated SEO reports"
+			},
+			"aiWorkflows": {
+				"title": "AI Workflows",
+				"description": "Integrated AI into business processes"
+			},
+			"adsDashboards": {
+				"title": "Google Ads & Wordstat",
+				"description": "Built analytical dashboards"
+			},
+			"infisical": {
+				"title": "Infisical",
+				"description": "Centralized secrets & access management"
+			},
+			"soloFrontend": {
+				"title": "Solo Frontend",
+				"description": "Owned frontend development end-to-end"
+			},
+			"ppcAutomation": {
+				"title": "Hours → Minutes",
+				"description": "Automated PPC data collection"
+			},
+			"modernStack": {
+				"title": "Modern Stack",
+				"description": "Migrated legacy projects"
+			},
+			"hrAutomation": {
+				"title": "HR Automation",
+				"description": "Automated candidate import"
+			}
+		}
+	},
 	"skills": {
 		"sectionTitle": "Skills",
 		"groups": {
