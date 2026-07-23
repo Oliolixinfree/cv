@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 import { ThemeProvider } from '@/shared/providers/theme-provider'
 
 const sans = Inter({
